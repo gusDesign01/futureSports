@@ -1,0 +1,17 @@
+{
+    "articles" : [
+        {
+            "id" : 1,
+            "title" : "News Article 01",
+            "summary" : "Summary of News Article 01",
+            "custom-text" : "Custom Text 01"
+        },
+
+        {
+            "id" : 2,
+            "title" : "News Article 02",
+            "summary" : "Summary of News Article 02",
+            "custom-text" : "Custom Text 02"
+        }
+    ]
+}

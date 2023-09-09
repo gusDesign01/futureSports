@@ -1,18 +1,22 @@
 import React from "react";
+import { Button, Form } from 'react-bootstrap';
 
 const SplashWindow = () => {
 
     return (
-        <div className="SplashWindow">
-
-             <h2>Welcome To Future Sports!</h2>
-
-                <p>To begin in the search box below search any sporting event you would to learn more about.
-                    Or if your not sure what you want you can always type in /Random to be surprised!
-                </p>
-
+        <div className="splash-window">
+            <div className="splash-content">
+                <h1>Welcome To Future Sports!</h1>
+                <p>fmkamlkfmkamfklfm</p>
+                <Form>
+                    <Form.Group controlId="searchForm" className="searchInputGroup">
+                        <Form.Control type="text" placeholder="Enter your search" className="searchInputCnt"/>
+                        <Button variant="primary" type="submit" className="splashSearchButton">Search</Button>
+                    </Form.Group>
+                </Form>
+            </div>
         </div>
-    );
-};
+        );
+    };
 
 export default SplashWindow;
