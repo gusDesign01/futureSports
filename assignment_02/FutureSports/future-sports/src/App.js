@@ -5,7 +5,7 @@ import Footer from './Components/Footer/Footer';
 import Main from './Components/Main/Main';
 import Navigation from './Components/Navigation/Navigation';
 import Header from './Components/Header/Header'
-import SplashWindow from './Components/SplashWindow/SplashWindow';
+import SplashWindow from './Components/Main/SplashWindow';
 
 function App() {
 

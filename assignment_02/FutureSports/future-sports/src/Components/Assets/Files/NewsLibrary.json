@@ -1,17 +1,19 @@
-{
-    "articles" : [
-        {
-            "id" : 1,
-            "title" : "News Article 01",
-            "summary" : "Summary of News Article 01",
-            "custom-text" : "Custom Text 01"
-        },
+[
+    {
+        "title": "Article 1",
+        "content": "Content of Article 1",
+        "videoUrl": "https://example.com/video1.mp4"
+    },
 
-        {
-            "id" : 2,
-            "title" : "News Article 02",
-            "summary" : "Summary of News Article 02",
-            "custom-text" : "Custom Text 02"
-        }
-    ]
-}
+    {
+        "title": "Article 2",
+        "content": "Content of Article 2",
+        "videoUrl": "https://example.com/video2.mp4"   
+    },
+
+    {
+        "title": "Article 3",
+        "content": "Content of Article 3",
+        "videoUrl": "https://example.com/video3.mp4"
+    }
+]
