@@ -6,6 +6,7 @@ const News = ({ article }) => {
         <div className="news">
             <h2>{article.title}</h2>
             <p>{article.content}</p>
+            <video src={article.videoUrl} controls />
         </div>
     )
 

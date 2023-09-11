@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form, Alert } from 'react-bootstrap';
-import NewsLibrary from "../Assets/Files/NewsLibrary.json";
+import NewsLibrary from "./NewsLibrary.json";
 import News from "./News";
 import VideoBox from "../Aside/VideoBox";
 
