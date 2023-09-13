@@ -5,7 +5,7 @@ import News from "./News";
 import EventsBox from "./EventsBox";
 import SplashWindow from "./SplashWindow"
 import NewsLibrary from "./NewsLibrary"
-import '../../App.css';
+//import '../../App.css';
 
 
 
@@ -36,20 +36,28 @@ const Main = () => {
 
     return (
         <div className="MainSection">
-            <ContactUs />
-            <PhotoGallery />
+            
+            
             <>
             <div>
                 <h3>News Component</h3>
-                <SplashWindow setFoundArticle={handleSetFoundArticle} />
+                <SplashWindow handleSetFoundArticle={handleSetFoundArticle} />
                 {foundNewsArticle && <News article={foundNewsArticle} />}
             </div>
             
             <div>
+                <h3>Photo Gallery</h3>
+                <SplashWindow handleSetFoundArticle={handleSetFoundArticle} />
+                {foundEventsArticle && <PhotoGallery article={foundEventsArticle} />}
+            </div>
+
+            <div>
                 <h3>Events Component</h3>
-                <SplashWindow setFoundArticle={handleSetFoundArticle} />
+                <SplashWindow handleSetFoundArticle={handleSetFoundArticle} />
                 {foundEventsArticle && <EventsBox article={foundEventsArticle} />}
             </div>
+
+            <ContactUs />
             </>
 
         </div>
@@ -57,3 +65,4 @@ const Main = () => {
 };
 
 export default Main;
+

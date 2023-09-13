@@ -5,9 +5,12 @@ import News from "./News";
 import VideoBox from "../Aside/VideoBox";
 import EventsBox from "./EventsBox";
 import '../../App.css';
+import PhotoGallery from "./PhotoGallery";
 
 
-const SplashWindow = () => {
+const SplashWindow = ({ handleSetFoundArticle }) => {
+
+    const [searchTerm, setSearchTerm] = useState('');
 
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -23,11 +26,14 @@ const SplashWindow = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        //Handle search using the term searchTerm
+        console.log(searchTerm)
+        
 
-        if (!errorMessage.target.value) {
+        if (!searchTerm) {
             setErrorMessage('Please Enter a search term');
-            setFoundArticle(false);
             setShowContent(false);
+            setFoundArticle(null);
             return;
         }
 
@@ -46,8 +52,12 @@ const SplashWindow = () => {
             setFoundArticle(null);
         }
 
+        handleSetFoundArticle(searchTerm);
+        setSearchTerm(''); //Clearing the search term after submission
         
     };
+
+    
    
 
 return (
@@ -64,7 +74,7 @@ return (
 
                 <Form onSubmit={handleSubmit} className="search-form">
                     <div className="search-group">
-                        <Form.Control type="text" placeholder="Enter your Search Query" className="search-input" name="searchTerm/"/>
+                        <Form.Control type="text" placeholder="Enter your Search Query" className="search-input" name="searchTerm" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
                         <Button variant="primary" type="submit" className="splashSearchButton">Search</Button>
                     </div>
                 </Form>
@@ -72,11 +82,12 @@ return (
             </div>
         </div>
     )}
-    {showContent && foundArticle && (
+    {showContent && (
         <>
         <News article={foundArticle} />
         <VideoBox article={foundArticle} />
         <EventsBox article={foundArticle} />
+        <PhotoGallery article={foundArticle} />
         </>
     )}
     </>

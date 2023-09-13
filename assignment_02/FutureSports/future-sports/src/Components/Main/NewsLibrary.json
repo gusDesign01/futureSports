@@ -3,6 +3,11 @@
         "title": "Article 1",
         "content": "Content of Article 1",
         "videoUrl": "https://example.com/video1.mp4",
+        "photos": [
+            "../Assets/Images/worldCup01.jpg",
+            "../Assets/Images/worldCup02.jpg",
+            "../Assets/Images/worldCup03.jpg"
+        ],
         "events": [
             {
                 "date": "2023-09-15",
@@ -16,6 +21,11 @@
         "title": "Article 2",
         "content": "Content of Article 2",
         "videoUrl": "https://example.com/video2.mp4",
+        "photos": [
+            "path/to/photos/photo3.jpg",
+            "path/to/photos/photo4.jpg",
+            "path/to/photos/photo5.jpg"
+        ],
         "events": [
             {
                 "date": "2023-08-15",
@@ -29,6 +39,11 @@
         "title": "Article 3",
         "content": "Content of Article 3",
         "videoUrl": "https://example.com/video3.mp4",
+        "photos": [
+            "path/to/photos/photo6.jpg",
+            "path/to/photos/photo7.jpg",
+            "path/to/photos/photo8.jpg"
+        ],
         "events": [
             {
                 "date": "2023-02-15",

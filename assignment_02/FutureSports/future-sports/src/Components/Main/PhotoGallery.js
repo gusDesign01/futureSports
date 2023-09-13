@@ -1,9 +1,14 @@
 import React from "react";
+import '../../App.css';
 
-const PhotoGallery = () => {
+const PhotoGallery = ({ article }) => {
     return (
-        <div className="PhotoGallery" >
-            <h3>PhotoGallery</h3>
+        <div className="photo-gallery">
+            {article && article.photos && article.photos.length > 0 ? (
+                <PhotoGallery photos={article} />
+            ) : (
+                <p>No photos available</p>      
+            )}
         </div>
     );
 };
