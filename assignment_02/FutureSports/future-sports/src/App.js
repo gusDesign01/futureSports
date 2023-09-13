@@ -5,14 +5,15 @@ import Footer from './Components/Footer/Footer';
 import Main from './Components/Main/Main';
 import Navigation from './Components/Navigation/Navigation';
 import Header from './Components/Header/Header'
-import SplashWindow from './Components/Main/SplashWindow';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
 
   return (
     <div className='App'>
-      <SplashWindow />
-      <Navigation />
+      <BrowserRouter>
+        <Navigation />
+      </BrowserRouter>
       <Header />
       <Main />
       <Aside />

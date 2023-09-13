@@ -1,15 +1,32 @@
-import React from "react";
+import { NavLink } from "react-bootstrap"
 
 const Navigation = () => {
-
-    const navItems = ["Photo Gallery", "Contact Us", "News", "Events"];
-    const navList = navItems.map((nav, index) => <li key={index}>{nav}</li>)
-
     return (
-        <div>
-            <h3>Navigations</h3>
-            <ul>{navList}</ul>
+        <nav className="navbar">
+        <div className="container">
+        <div className="logo">
+ 
         </div>
+
+        <div className="nav-elements">
+            <ul>
+                 <li>
+                    <NavLink to="/Photo Gallery">PhotoGallery</NavLink>
+                </li>
+                 <li>
+                     <NavLink to="/Video">Video</NavLink>
+                 </li>
+                 <li>
+                    <NavLink to="/News">News</NavLink>
+                 </li>
+                 <li>
+                    <NavLink to="/Events">Events</NavLink>
+                 </li>
+            </ul>
+        </div>
+        </div>
+        </nav>
+
     );
 };
 

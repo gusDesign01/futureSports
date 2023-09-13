@@ -3,10 +3,11 @@ import { Button, Form, Alert } from 'react-bootstrap';
 import NewsLibrary from "./NewsLibrary.json";
 import News from "./News";
 import VideoBox from "../Aside/VideoBox";
+import EventsBox from "./EventsBox";
+import '../../App.css';
+
 
 const SplashWindow = () => {
-
-    const [searchTerm, setSearchTerm] = useState('');
 
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -18,18 +19,19 @@ const SplashWindow = () => {
         document.querySelector('.splash-window').classList.add('fade-in');
     }, []);
 
-    console.log(NewsLibrary);
+    //console.log(NewsLibrary);
 
-    const handleSearch = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
 
-        if (!searchTerm) {
+        if (!errorMessage.target.value) {
             setErrorMessage('Please Enter a search term');
+            setFoundArticle(false);
+            setShowContent(false);
             return;
         }
 
         const foundArticle = NewsLibrary.find((article) =>
-
 
         article.title.toLowerCase().includes(searchTerm.toLowerCase())
         );
@@ -55,11 +57,14 @@ return (
             <div className="splash-content">
                 <h1>Welcome To Future Sports!</h1>
 
-                <Form onSubmit={handleSearch} className="search-form">
+                <p>
+                    To begin in the search box below search any sporting event you would to learn more about.
+                    Or if your not sure what you want you can always type in /Random to be surprised!
+                </p>
+
+                <Form onSubmit={handleSubmit} className="search-form">
                     <div className="search-group">
-                        <Form.Control type="text" placeholder="Enter your Search Query" className="search-input" value={searchTerm} onChange={(e) => 
-                        setSearchTerm(e.target.value)
-                        }/>
+                        <Form.Control type="text" placeholder="Enter your Search Query" className="search-input" name="searchTerm/"/>
                         <Button variant="primary" type="submit" className="splashSearchButton">Search</Button>
                     </div>
                 </Form>
@@ -67,7 +72,13 @@ return (
             </div>
         </div>
     )}
-    {showContent && foundArticle && <News article={foundArticle} />}
+    {showContent && foundArticle && (
+        <>
+        <News article={foundArticle} />
+        <VideoBox article={foundArticle} />
+        <EventsBox article={foundArticle} />
+        </>
+    )}
     </>
 );
 }; //const splash window end

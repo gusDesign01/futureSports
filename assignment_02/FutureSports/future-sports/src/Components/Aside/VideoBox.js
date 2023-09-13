@@ -1,9 +1,10 @@
 import React from "react";
+//import VideoBox from "../Aside/Aside/VideoBox"
 
-const VideoBox = () => {
+const VideoBox = ({ article}) => {
     return (
-        <div className="VideoBox" >
-            <h3>VideoBox</h3>
+        <div className="news">
+            <p>{article.videoUrl}</p>
         </div>
     );
 };

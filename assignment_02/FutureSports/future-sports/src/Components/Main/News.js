@@ -1,16 +1,19 @@
 import React from "react";
+import '../../App.css';
 
 const News = ({ article }) => {
+      return (
+        <div className="news">
+          {article && article.title && article.content ? (
+            <>
+              <h2>{article.title}</h2>
+              <p>{article.content}</p>
+            </>
+          ) : (
+            <p>No news available.</p>
+          )}
+        </div>
+      );
+    };
 
-    return(
-        <div className="news">
-            <h2>{article.title}</h2>
-            <p>{article.content}</p>
-            <video src={article.videoUrl} controls />
-        </div>
-    )
-
-
-};
-
-export default News;
+    export default News;
