@@ -11,9 +11,7 @@ function App() {
 
   return (
     <div className='App'>
-      <BrowserRouter>
-        <Navigation />
-      </BrowserRouter>
+      <Navigation />
       <Header />
       <Main />
       <Aside />

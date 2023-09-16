@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Womens World Cup 2023",
+        "videoUrl": "https://example.com/video1.mp4"
+    },
+
+    {
+        "title": "Article 2",
+        "videoUrl": "https://example.com/video2.mp4" 
+    },
+
+    {
+        "title": "Article 3",
+        "videoUrl": "https://example.com/video3.mp4"
+    }
+]

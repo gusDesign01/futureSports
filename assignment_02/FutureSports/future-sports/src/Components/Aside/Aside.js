@@ -1,37 +1,22 @@
 import React, { useState, useEffect } from "react";
 import VideoBox from "./VideoBox";
-import SplashWindow from "../Main/SplashWindow";
-import NewsLibrary from "../Main/NewsLibrary.json"
+import "../Main/SplashWindow";
+//import VideoLibrary from "../Main/VideoLibrary"
 import '../../App.css';
 
-const Aside = () => {
+const Aside = ({ foundVideoArticle }) => {
 
-    const [foundVideoArticle, setFoundVideoArticle] = useState(null);
 
-    useEffect(() => {
+    console.log('foundVideoArticle:', foundVideoArticle);
 
-    // Simulating API fetch with a delay of 1 second
-
-    const fetchData = () => {
-
-        setTimeout(() => {
-            setFoundVideoArticle(NewsLibrary);
-            }, 1000);
-            };
-        
-            fetchData();
-            }, []);
-
-    const handleSetFoundArticle = (article) => {
-        setFoundVideoArticle(article);
-    }; 
-
-    return (
-        <div className="aside-section">
-        <h3>Video</h3>
-        <SplashWindow handleSetFoundArticle={handleSetFoundArticle} />
-        {foundVideoArticle && <VideoBox article={foundVideoArticle} />}
+    return(
+    <div className="video-section">
+    {foundVideoArticle &&(
+        <div className="video-section">
+            <VideoBox article={foundVideoArticle} />
         </div>
+    )}
+    </div>
     );
 };
 

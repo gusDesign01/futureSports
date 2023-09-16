@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Womens World Cup 2023",
+        "photos": [
+            "../Assets/Images/worldCup01.jpg",
+            "../Assets/Images/worldCup02.jpg",
+            "../Assets/Images/worldCup03.jpg"
+        ]
+    },
+
+    {
+        "title": "Article 2",
+        "photos": [
+            "path/to/photos/photo3.jpg",
+            "path/to/photos/photo4.jpg",
+            "path/to/photos/photo5.jpg"
+        ]
+    },
+
+    {
+        "title": "Article 3",
+        "photos": [
+            "path/to/photos/photo6.jpg",
+            "path/to/photos/photo7.jpg",
+            "path/to/photos/photo8.jpg"
+        ]
+    }
+]

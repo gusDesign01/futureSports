@@ -1,11 +1,17 @@
 import React from "react";
 import '../../App.css';
 
-const EventsBox = ({ article }) => {
+const EventsBox = ({ foundEventsArticle }) => {
+    console.log("foundEventsArticle:", foundEventsArticle);
+
+    if (!foundEventsArticle || !foundEventsArticle.info) {
+        console.log("Invalid article or missing events property");
+        return null;
+    }
      return (
         <div className="events-box">
-            <h2>Events</h2>
-            {article.events && article.events.length > 0 ? (
+            
+            {foundEventsArticle && foundEventsArticle.info && foundEventsArticle.info.length > 0 ? (
 
                 <table>
                     <thead>
@@ -17,7 +23,7 @@ const EventsBox = ({ article }) => {
                     </thead>
                     <tbody>
 
-                        {article.events.map((event, index) => (
+                        {foundEventsArticle.info.map((event, index) => (
 
                             <tr key={index}>
                                 <td>{event.date}</td>

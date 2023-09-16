@@ -1,55 +1,16 @@
 [
     {
-        "title": "Article 1",
-        "content": "Content of Article 1",
-        "videoUrl": "https://example.com/video1.mp4",
-        "photos": [
-            "../Assets/Images/worldCup01.jpg",
-            "../Assets/Images/worldCup02.jpg",
-            "../Assets/Images/worldCup03.jpg"
-        ],
-        "events": [
-            {
-                "date": "2023-09-15",
-                "name": "Event 1",
-                "location": "Location 1"
-            }
-        ]
+        "title": "Womens World Cup 2023",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rhoncus volutpat ornare. Nulla sed nunc eget eros malesuada sodales eu a magna. Ut tincidunt pretium venenatis. Nam a ante accumsan, pharetra tellus non, euismod lacus. Proin et interdum tortor. Pellentesque vulputate vestibulum risus ut porttitor. Pellentesque mi dui, varius et nulla eget, consectetur varius ex. Duis hendrerit libero eu enim cursus rutrum a at risus. Vestibulum imperdiet ante tortor, ac sodales lorem blandit et. Nullam varius tellus ut iaculis venenatis. Sed enim odio, ornare in lobortis sit amet, tempus sit amet est. Vestibulum vitae mattis risus, et porttitor urna. In gravida purus at elit rutrum, malesuada pretium turpis accumsan. Pellentesque et orci nisl. Pellentesque elementum consequat augue, eget gravida neque interdum ut. Nulla ut consectetur enim, vitae rutrum eros. "
     },
 
     {
         "title": "Article 2",
-        "content": "Content of Article 2",
-        "videoUrl": "https://example.com/video2.mp4",
-        "photos": [
-            "path/to/photos/photo3.jpg",
-            "path/to/photos/photo4.jpg",
-            "path/to/photos/photo5.jpg"
-        ],
-        "events": [
-            {
-                "date": "2023-08-15",
-                "name": "Event 2",
-                "location": "Location 2"
-            }
-        ]   
+        "content": "Content of Article 2"
     },
 
     {
         "title": "Article 3",
-        "content": "Content of Article 3",
-        "videoUrl": "https://example.com/video3.mp4",
-        "photos": [
-            "path/to/photos/photo6.jpg",
-            "path/to/photos/photo7.jpg",
-            "path/to/photos/photo8.jpg"
-        ],
-        "events": [
-            {
-                "date": "2023-02-15",
-                "name": "Event 3",
-                "location": "Location 3"
-            }
-        ]
+        "content": "Content of Article 3"
     }
 ]

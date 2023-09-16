@@ -1,10 +1,16 @@
 import React from "react";
+import "../Main/SplashWindow"
+import "../Main/VideoLibrary.json"
+
 //import VideoBox from "../Aside/Aside/VideoBox"
 
-const VideoBox = ({ article}) => {
+const VideoBox = ({ foundVideoArticle }) => {
     return (
-        <div className="news">
-            <p>{article.videoUrl}</p>
+        <div className="video-box">
+            <div>
+                <h3>Video Component</h3>
+                {foundVideoArticle && <VideoBox foundVideoArticle={foundVideoArticle} />}
+            </div>
         </div>
     );
 };

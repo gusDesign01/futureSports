@@ -1,10 +1,9 @@
 
 .App {
-  text-align: left;
   display: block;
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: rgb(70, 108, 180);
 }
 
 .App-logo {
@@ -19,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #b43cae;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -44,12 +43,13 @@
 
 .splash-window {
   position: fixed;
-  top: 0;
+  top:0;
   left: 0;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  z-index: 9999;
   background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(0);
+  backdrop-filter: blur(15px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,25 +111,19 @@
 }
 
 .container {
-  width: 50px;
-  margin: 0 auto;
-  padding: 0 15px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  height: 100%;
-  float:left;
+  justify-content: center;
+  height: 5vh;
+  background-color: blue;
 }
 
 .navbar {
-  max-width: 1700px;
-  height: 60px;
-  background-color: #fef7e5;
-  position: relative;
-  padding: 5px;
-  margin-left: 100px;
-  display: block;
-
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: red;
 }
 
 .logo {
@@ -176,24 +170,40 @@
 
 
 
-.MainSection {
-  float: left;
-  width: 40%;
-  height: 100%;
-  display: block;
+.article-section,
+.video-section {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
-  background-color: black;
+  background-color: rgba(0,0,0,0.25);
   color: white;
+  height: 800px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
-.aside-section {
-  float: right;
+.article-section {
+  left: 0;
+  width: 40%;
+  margin-right: 10px;
+  z-index: 2;
+}
+
+.video-section {
+  right: 0;
+  width: 40%;
+  margin-left: 10px;
+  z-index: 2;
+}
+
+.news-section {
+  width: 40%;
+  margin-left: 50px;
+  align-items: center;
   display: flex;
-  width: 60%;
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  align-content: center;
 }
 
 .Footer {
@@ -204,3 +214,79 @@
   z-index: 100;
   background-color: black;
 }
+
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.photo-gallery .carousel {
+  width: 100%;
+  height: 100%;
+
+}
+
+.photo-gallery .carousel .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-gallery .carousel .carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.photo-gallery .carousel .carousel-control-prev,
+.photo-gallery .carousel .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.photo-gallery .carousel .carousel-control-icon,
+.photo-gallery .carousel .carousel-control-icon {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 1;
+
+}
+
+.photo-gallery .carousel .carousel-control-prev {
+  left: -25px;
+}
+
+.photo-gallery .carousel .carousel-control-prev {
+  right: -25px
+}
+
+.carousel-transition-enter{
+  opacity: 0;
+}
+
+.carousel-transition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.carousel-transition-exit {
+  opacity: 1;
+}
+
+.carousel-transition-exit-active{
+  opacity: 0;
+  transition: 500ms;
+}
+
+
+
+
+
+
+
+
+
