@@ -1,6 +1,8 @@
 import React from "react";
 import '../../App.css';
 
+//In this component once the user input is matched this will populate the relevant info into the table below
+
 const EventsBox = ({ foundEventsArticle }) => {
     console.log("foundEventsArticle:", foundEventsArticle);
 
@@ -9,9 +11,16 @@ const EventsBox = ({ foundEventsArticle }) => {
         return null;
     }
      return (
-        <div className="events-box">
+        <div className="events-box"> 
+        <div className="events-heading">
+            <h3 className="events-text">
+                Upcoming Events
+            </h3>
+        </div>
             
             {foundEventsArticle && foundEventsArticle.info && foundEventsArticle.info.length > 0 ? (
+
+                //  {/* Pulls in the data for table and then populates it with data matching the article */}
 
                 <table>
                     <thead>
@@ -34,7 +43,7 @@ const EventsBox = ({ foundEventsArticle }) => {
                         </tbody>
                         </table>
                     ) : (
-                        <p>No events available.</p>
+                        <p>No events available.</p> //If no Event is found display this message 
                         )}
                         </div>
                         );

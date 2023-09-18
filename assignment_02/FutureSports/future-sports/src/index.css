@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./Components/Assets/Images/soccer_mainBackground.jpg");
+  background-color: black;
 }
 
 code {

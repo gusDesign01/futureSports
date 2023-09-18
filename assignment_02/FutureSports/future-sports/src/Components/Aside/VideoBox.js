@@ -1,4 +1,5 @@
 import React from "react";
+import Youtube from "react-youtube"
 import "../Main/SplashWindow"
 import "../Main/VideoLibrary.json"
 
@@ -8,8 +9,16 @@ const VideoBox = ({ foundVideoArticle }) => {
     return (
         <div className="video-box">
             <div>
-                <h3>Video Component</h3>
-                {foundVideoArticle && <VideoBox foundVideoArticle={foundVideoArticle} />}
+                {foundVideoArticle && (
+                    <div>
+                        <h2>{foundVideoArticle.title}</h2>
+                        {foundVideoArticle.videoUrl && (
+                            <div className="video-player">
+                                <Youtube videoId={foundVideoArticle.videoUrl}/>
+                            </div>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );

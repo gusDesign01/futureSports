@@ -1,10 +1,11 @@
 [
     {
         "title": "Womens World Cup 2023",
-        "photos": [
-            "../Assets/Images/worldCup01.jpg",
-            "../Assets/Images/worldCup02.jpg",
-            "../Assets/Images/worldCup03.jpg"
+        "id": 1,
+        "photoUrl": [
+            "https://www.hyundai.com/content/dam/hyundai/ww/en/images/brand-journal/lifestyle/230717-2023-womens-world-cup/2023-womens-worldcup-stg-social.jpg",
+            "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/FE3RX56VVROWFEQR4PDWSM3VOA.jpg",
+            "https://images.sbs.com.au/dims4/default/641444e/2147483647/strip/true/crop/1920x1080+0+0/resize/1280x720!/quality/90/?url=http%3A%2F%2Fsbs-au-brightspot.s3.amazonaws.com%2F93%2F85%2F1446c02f4ec0be1f4a84603b5098%2Fmatildas-stats-header-v4.jpg"
         ]
     },
 
